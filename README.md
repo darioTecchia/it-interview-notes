@@ -15,7 +15,7 @@ _Feel free to contribute._
   - [x] Static Methods and Instance (Non static) Methods
   - [x] `Array`
   - [x] `String`
-  - [ ] `Enum`
+  - [ ] `enum`
   - [ ] Recursion
   - [ ] Multithreading
   - [ ] `Collection` Interface and `List` Interface
