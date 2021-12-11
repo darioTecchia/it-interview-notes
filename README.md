@@ -13,10 +13,14 @@ _Feel free to contribute._
   - [x] Overload
   - [x] VarArgs
   - [x] Static Methods and Instance (Non static) Methods
-  - [x] Array
-  - [x] String
-  - [ ] Enum
+  - [x] `Array`
+  - [x] `String`
+  - [ ] `Enum`
   - [ ] Recursion
+  - [ ] Multithreading
+  - [ ] `Collection` Interface and `List` Interface
+  - [ ] `::` Operator
+  - [ ] Lambda Expression
 - [ ] OO Principles
 - [ ] SQL
 - [ ] UML
