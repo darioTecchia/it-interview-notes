@@ -1,4 +1,4 @@
-# Java and Object Oriented Approach
+# Java
 
 ## Java Scope
 In Java, variables are only accessible inside the region they are created. This is called scope.
@@ -120,4 +120,52 @@ System.out.println(x == y); // false!
 Integer x = 10;
 Integer y = 10;
 System.out.println(x == y); // true!
+```
+
+## Overload
+With __method overloading__, multiple methods can have the same name with different parameters. A typical example is a constructor that have different parameters:
+```java
+class Foo {
+  public Foo() { }
+  public Foo(String a) { }
+  public Foo(String a, int b) { }
+}
+```
+
+## VarArgs
+Varargs provide a short-hand for methods that support an arbitrary number of parameters of one type.
+
+```java
+public String formatWithVarArgs(String... values) {
+    // ...
+}
+
+formatWithVarArgs();
+
+formatWithVarArgs("a", "b", "c", "d");
+```
+
+## Static Methods and Instance (Non static) Methods
+An example to demonstrate the differences between `static` and `public` methods:
+```java
+public class Main {
+  // Static method
+  static void myStaticMethod() {
+    System.out.println("Static methods can be called without creating objects");
+  }
+
+  // Public method
+  public void myPublicMethod() {
+    System.out.println("Public methods must be called by creating objects");
+  }
+
+  // Main method
+  public static void main(String[] args) {
+    Main.myStaticMethod(); // Call the static method
+    // myPublicMethod(); This would compile an error
+
+    Main myObj = new Main(); // Create an object of Main
+    myObj.myPublicMethod(); // Call the public method on the object
+  }
+}
 ```
