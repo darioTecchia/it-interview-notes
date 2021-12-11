@@ -169,3 +169,31 @@ public class Main {
   }
 }
 ```
+
+## Array
+A simple array of `n` elements can be specified in those ways:
+
+```java
+String[n] cars; // or String cars[n];
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+int[] myNum = {10, 20, 30, 40};
+```
+
+## String
+Strings are used for storing text and they are __immutable__. Infact, if we apply the `replace` method to a string it does not change, but the new returned value that can be assigned to the old reference. Rather the classes `StringBuffer` or `StringBuilder` can be used.
+
+```java
+String a = "Ciao Mondo";
+
+a.replace("Mondo", "Bella");
+
+System.out.println(a); // Ciao Mondo
+
+a = a.replace("Mondo", "Bella");
+
+System.out.println(a); // Ciao Bella
+```
+
+## Enum
