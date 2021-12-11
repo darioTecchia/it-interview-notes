@@ -197,3 +197,6 @@ System.out.println(a); // Ciao Bella
 ```
 
 ## Enum
+An `enum` is a special "class" that represents a group of constants (unchangeable variables, like final variables). We "force" a variable to have a value predefined by the programmer.
+
+The `enum` class extends `java.lang.Enum` class.
