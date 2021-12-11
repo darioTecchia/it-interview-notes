@@ -21,3 +21,4 @@ _Feel free to contribute._
 - [ ] SQL
 - [ ] UML
 - [ ] Design Pattern
+- [ ] HR Interview
