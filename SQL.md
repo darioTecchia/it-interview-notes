@@ -22,8 +22,5 @@ Here are the different types of the JOINs in SQL:
 - `RIGHT (OUTER) JOIN`: Returns all records from the right table, and the matched records from the left table.
 - `FULL (OUTER) JOIN`: Returns all records when there is a match in either left or right table.
 
-![FULL JOIN](assets/sql/img_fulljoin.gif "FULL JOIN")
-![INNER JOIN](assets/sql/img_innerjoin.gif "INNER JOIN")
-![LEFT JOIN](assets/sql/img_leftjoin.gif "LEFT JOIN")
-![RIGHT JOIN](assets/sql/img_rightjoin.gif "RIGHT JOIN")
+![RIGHT JOIN](assets/sql/joins.jpg "RIGHT JOIN")
 
