@@ -15,13 +15,14 @@ _Feel free to contribute._
   - [x] Static Methods and Instance (Non static) Methods
   - [x] `Array`
   - [x] `String`
-  - [ ] `enum`
-  - [ ] Recursion
-  - [ ] Multithreading
-  - [ ] `Collection` Interface and `List` Interface
-  - [ ] `::` Operator
-  - [ ] Lambda Expression
+  - [x] `enum`
+  - [x] Recursion
+  - [x] Multithreading
+  - [x] `Collection` Interface and `List` Interface
+  - [x] `::` Keyword
+  - [x] Lambda Expression
 - [ ] OO Principles
+- [ ] Data Structures and Algorithms
 - [ ] SQL
 - [ ] UML
 - [ ] Design Pattern
