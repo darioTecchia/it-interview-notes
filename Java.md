@@ -132,6 +132,9 @@ class Foo {
 }
 ```
 
+## Override
+// TODO
+
 ## VarArgs
 Varargs provide a short-hand for methods that support an arbitrary number of parameters of one type.
 
@@ -350,5 +353,23 @@ Tail Call Elimination (TCE)Pushing the environment on the stack seems necessary 
 Tail Call Elimination is sometimes called Tail Call Optimization (TCO). TCE is generally an optimization, and we may live without it. However, when it comes to recursive function calls, TCE is no longer an optimization. It is a mandatory feature. That’s why TCE is a better term than TCO when it comes to handling recursion.
 
 ## Abstract Class
+An abstract class is a class that cannot be instantiated.
+
+### Abstract Class vs Interface
+- An __Abstract Class__ is used to share code among several classes, if several classes have methods in common.
+- An __Interface__ is used if several unrelated classes share the same interface.
 
 ## Generic Type
+With __generic types__ you can specify the type of data on which a class operates by passing the required type as a parameter (`<T>`).
+```java
+package it.html.java.generics;
+public class Bottiglia<T> {
+	private T contenuto;
+	public Bottiglia(T t){
+		contenuto=t;
+	}
+	public T getContenuto() {
+		return contenuto;
+	}
+}
+```
