@@ -76,3 +76,51 @@ _`A` is a subclass of `B`_:
 `A` inherits its behavior from `B`, and `A` can be used anywhere that `B` can be used.
 
 ## Polymorphism
+There are three types of __polymorphism__:
+- __Ad-Hoc Polymorphism__: method __overloading__.
+```java
+public double area(double base, double altezza) {
+	return base * altezza * 0.5;
+}
+public double area(double x1, double y1,
+                   double x2, double y2,
+                   double x3, double y3) {
+	return 0.5 * (x1*y2 + y1*x3 + x2*y3 - x3*y2 - y3*x1 - x2*y1);
+}
+```
+- __Inclusion Polymorphism__: method __override__ (except private or final methods).
+```java
+public class B {
+	public int method(int i, int j) {
+		return i+j;
+    }
+	public final int finalMethod(int i, int j) {
+		return i+j;
+	}
+}
+public class A extends B {
+	public int method(int i, int j) {
+		return i-j;
+	}
+	
+	/*
+	 * finalMethod can't be overrided because its modifier is final 
+	 */
+	// public int finalMethod(int i, int j) {
+	// 	 return i-j;
+	// }
+}
+```
+- __Covariant Return Type__: a method whose return value can be replaced with a subtype when a method is overridden in a subclass.
+```java
+public class D {
+	public B giveMeB() {
+		// ...
+	}
+}
+public class E extends D {
+   public A giveMeB() {
+     // returns A instance
+   }
+}
+```
