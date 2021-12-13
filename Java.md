@@ -348,3 +348,7 @@ Of course, method calls may be deeply nested. Is there a limit to method nesting
 Tail Call Elimination (TCE)Pushing the environment on the stack seems necessary in order to allow resuming computation after the called method returns. But not always. When the call to a method is the last thing to do in the calling method, there is nothing to resume when it returns, so it should be OK to resume directly with the caller of the current method instead of the current method itself. A method call occurring in last position, meaning as the last thing to do before returning, is called a tail call. Avoiding pushing the environment to the stack to resume method processing after a tail call is an optimization technique known as Tail Call Elimination (TCE). Unfortunately, Java does not implement TCE.
 
 Tail Call Elimination is sometimes called Tail Call Optimization (TCO). TCE is generally an optimization, and we may live without it. However, when it comes to recursive function calls, TCE is no longer an optimization. It is a mandatory feature. That’s why TCE is a better term than TCO when it comes to handling recursion.
+
+## Abstract Class
+
+## Generic Type
