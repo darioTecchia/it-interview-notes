@@ -105,10 +105,11 @@ public class A extends B {
 	
 	/*
 	 * finalMethod can't be overrided because its modifier is final 
+	 *
+	 public int finalMethod(int i, int j) {
+	 	 return i-j;
+	 }
 	 */
-	// public int finalMethod(int i, int j) {
-	// 	 return i-j;
-	// }
 }
 ```
 - __Covariant Return Type__: a method whose return value can be replaced with a subtype when a method is overridden in a subclass.
