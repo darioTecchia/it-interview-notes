@@ -159,3 +159,67 @@ __Result__:
 |Antonio Moreno Taquería|Null|
 
 > Note: The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
+
+## Aggregation functions and UNION
+### Aggregation functions
+Among the __aggregation functions__, we find:
+- `COUNT`: returns the number of elements;
+- `COUNT (DISTINCT)`: variant of `COUNT` that considers duplicate values only once;
+- `MAX`: returns the maximum value of the set;
+- `MIN`: returns the minimum value of the set;
+- `AVG`: returns the average value of the set;
+- `SUM`: sums the values.
+
+### UNION clause
+The `UNION` clause is used to merge the results of two queries.
+
+In order for this to work it is necessary that the projections of the two `SELECT`s involved are composed of the same number of fields, and that the data types of the same are compatible with the corresponding ones in the other query.
+
+Example:
+```SQL
+SELECT description, total FROM data
+UNION
+SELECT description, total FROM archived_data
+```
+
+> Instead of `UNION` you can use `UNION ALL`, which will also show duplicate values, while `UNION`'s default behavior does not.
+
+## MySQL subquery
+A subquery is nothing more than a `SELECT` within another statement. Subqueries can also be nested to considerable depths.
+
+We have already seen that every `SELECT` logically returns a table made up of rows and columns. In the case of subqueries it is necessary to make a distinction: they can return a __single value (scalar)__, a __single row__, a __single column__, or a normal table. The different types of subqueries can be found in different points of the instruction.
+
+## Single Value
+```SQL
+SELECT column1
+FROM t1
+WHERE column1 = (SELECT MAX(column2) FROM t2);
+```
+
+## Single Column
+When a subquery returns a column, it can be used to make comparisons through the `ANY`, `SOME`, `IN` and `ALL` operators:
+
+```sql
+SELECT s1 FROM t1 WHERE s1 > ANY (SELECT s1 FROM t2);
+SELECT s1 FROM t1 WHERE s1 IN (SELECT s1 FROM t2);
+```
+
+The first query means "_select from t1 the values of s1 that are greater than at least 1 of the values of s1 on t2_". The second query selects the values of s1 that are equal to __at least 1__ of the values of s1 on t2. "IN" is synonymous with "`= ANY`". "`SOME`" is equivalent to "`ANY`".
+
+```sql
+SELECT s1 FROM t1 WHERE s1 > ALL (SELECT s1 FROM t2);
+```
+
+The meaning here is "_select from t1 the values of s1 that are greater than all the values of s1 on t2_". The "`NOT IN`" clause is equivalent to "`<> ALL`".
+
+## Single Row (Multiple Columns)
+When a subquery returns a single row, it can be used to make comparisons through __row constructors__:
+
+```sql
+SELECT column1, column2
+FROM t1
+WHERE (column1, column2)
+IN (SELECT column1, column2 FROM t2);
+```
+
+This query extracts the rows of t1 where the values of column1 and column2 are repeated in a row of t2. The expression "`(column1, column2)`" is, in fact, a row constructor, which could also be expressed as "`ROW(column1, column2)`".
