@@ -6,9 +6,9 @@ _Feels free to contribute._
 
 ## Table of Contents (and TODO)
 
-- [Java](/Java)
-- [OO Principles](/OO_Principles)
-- [SQL](/SQL)
+- [Java](/Java.md)
+- [OO Principles](/OO_Principles.md)
+- [SQL](/SQL.md)
 - Data Structures and Algorithms
 - UML
 - Design Pattern
