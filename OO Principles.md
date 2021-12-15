@@ -1,5 +1,16 @@
 # Object Oriented Principles
 
+- [Object Oriented Principles](#object-oriented-principles)
+  * [Object Oriented Design](#object-oriented-design)
+    + [Object Design vs Structured Design](#object-design-vs-structured-design)
+  * [OOP, OOD, OOA](#oop--ood--ooa)
+  * [Object Oriented style features](#object-oriented-style-features)
+  * [Hierarchy](#hierarchy)
+  * [Polymorphism](#polymorphism)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 Object oriented programming enable to abstract entity of the domain model into __objects__.
 
 Objects are composed of two part: the __state__ and the __behaviour__. This two parts are implemented in a __class__. 
