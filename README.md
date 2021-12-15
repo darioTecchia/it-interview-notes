@@ -5,9 +5,10 @@ Notes on different topics that I have grouped together, useful for job interview
 _Feels free to contribute._
 
 ## Table of Contents (and TODO)
-- Java
-- OO Principles
-- SQL
+
+- [Java](/Java)
+- [OO Principles](/OO_Principles)
+- [SQL](/SQL)
 - Data Structures and Algorithms
 - UML
 - Design Pattern
