@@ -1,5 +1,42 @@
 # Java
 
+- [Java](#java)
+  * [Java Scope](#java-scope)
+    + [Method Scope](#method-scope)
+    + [Block Scope](#block-scope)
+    + [Variable Kind](#variable-kind)
+  * [Java Modifiers](#java-modifiers)
+    + [Access Modifiers](#access-modifiers)
+    + [Non-Access Modifiers](#non-access-modifiers)
+  * [Wrapper Classes](#wrapper-classes)
+  * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
+    + [Equality between wrapper classes](#equality-between-wrapper-classes)
+  * [Overload](#overload)
+  * [Override](#override)
+  * [VarArgs](#varargs)
+  * [Static Methods and Instance (Non static) Methods](#static-methods-and-instance--non-static--methods)
+  * [Array](#array)
+  * [String](#string)
+  * [Enum](#enum)
+  * [Multithreading](#multithreading)
+    + [Creating a Thread](#creating-a-thread)
+      - [Extend Syntax](#extend-syntax)
+      - [Implement Syntaxt](#implement-syntaxt)
+  * [Collection Interface and List Interface](#collection-interface-and-list-interface)
+  * [:: Keyword](#---keyword)
+  * [Lambda Expression](#lambda-expression)
+  * [Recursion](#recursion)
+    + [Recursion Example](#recursion-example)
+      - [Example](#example)
+      - [Example Explained](#example-explained)
+    + [How is recursion implemented in Java?](#how-is-recursion-implemented-in-java-)
+  * [Abstract Class](#abstract-class)
+    + [Abstract Class vs Interface](#abstract-class-vs-interface)
+  * [Generic Type](#generic-type)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Java Scope
 In Java, variables are only accessible inside the region they are created. This is called scope.
 
