@@ -158,7 +158,7 @@ __Result__:
 |Ana Trujillo Emparedados y helados|10308|
 |Antonio Moreno Taquería|Null|
 
-> Note: The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
+> Note: The `FULL OUTER JOIN` keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
 
 ## Aggregation functions and UNION
 ### Aggregation functions
@@ -223,3 +223,50 @@ IN (SELECT column1, column2 FROM t2);
 ```
 
 This query extracts the rows of t1 where the values of column1 and column2 are repeated in a row of t2. The expression "`(column1, column2)`" is, in fact, a row constructor, which could also be expressed as "`ROW(column1, column2)`".
+
+## Transactions and Locks
+A __lock__ can be requested in reading or writing: in the first case the table cannot be used in writing but only in reading, in the second case the lock prevents any kind of access.
+
+```sql
+LOCK TABLES tabella [AS alias] {READ [LOCAL] | [LOW_PRIORITY] WRITE} [, tabella [AS alias] {READ [LOCAL] | [LOW_PRIORITY] WRITE}] ...
+---
+UNLOCK TABLES
+```
+
+The use of __transactions__ allows us to "consolidate" changes to the database only at a very specific time: from the moment we start a transaction, updates remain suspended (and invisible to other users) until we confirm them (__commit__); as an alternative to confirmation, it is possible to cancel them (__rollback__).
+```sql
+START TRANSACTION
+... update instructions (1) ...
+SAVEPOINT sp1;
+... update instructions (2) ...
+ROLLBACK TO SAVEPOINT sp1;
+... update instructions (3) ...
+COMMIT
+```
+
+## Views
+In SQL, a view is a virtual table based on the result-set of an SQL statement.
+
+A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+
+You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
+
+A view is created with the `CREATE VIEW` statement. 
+
+## Stored Procedures e Stored Functions
+A __stored procedure__ is a set of SQL statements that are stored in the server with a name that identifies them; this name allows you to later re-execute the set of statements by simply referring to it.
+
+__Stored functions__ are similar to stored procedures, but they have a simpler purpose, that is to define real functions, like those already provided by MySQL. They return a value, and therefore cannot return resultsets, unlike stored procedures.
+
+## Trigger
+__Triggers__ are objects associated with tables, which are triggered when a certain event occurs in relation to that table. We will then have the following types of triggers:
+- `BEFORE INSERT`
+- `BEFORE UPDATE`
+- `BEFORE DELETE`
+- `AFTER INSERT`
+- `AFTER UPDATE`
+- `AFTER DELETE`
+
+The trigger will establish an instruction (or a series of instructions) that will be executed for each row affected by the event.
+
+> The trigger is associated with a table, but it is part of a database, so its name must be unique within the db itself.
