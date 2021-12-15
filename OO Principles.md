@@ -71,7 +71,11 @@ Characteristics of the object oriented "style":
 ## Hierarchy
 _`A` is a subclass of `B`_:
 
+<center>
+
 ![A is a subclass of B](assets/oo_principles/hierarchy.webp "A is a subclass of B")
+
+</center>
 
 `A` inherits its behavior from `B`, and `A` can be used anywhere that `B` can be used.
 
