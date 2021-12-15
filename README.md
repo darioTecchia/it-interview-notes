@@ -9,7 +9,8 @@ _Feels free to contribute._
 - [Java](/Java.md)
 - [OO Principles](/OO_Principles.md)
 - [SQL](/SQL.md)
-- Data Structures and Algorithms
+- [Data Structures](/Data_Structures.md)
+- [Algorithms](/Algorithms.md)
 - UML
 - Design Pattern
 - HR Interview
