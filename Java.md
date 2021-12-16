@@ -127,7 +127,7 @@ Wrapper classes provide a way to use primitive data types (`int`, `boolean`, etc
 
 Sometimes you must use wrapper classes, for example when working with Collection objects, such as `ArrayList`, where primitive types cannot be used (the list can only store objects).
 
-## Autoboxing and Unboxing
+### Autoboxing and Unboxing
 Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and so on. If the conversion goes the other way, this is called unboxing.
 
 Here there are simple examples:
