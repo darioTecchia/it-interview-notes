@@ -11,6 +11,6 @@ _Feels free to contribute._
 - [SQL](/SQL.md)
 - [Data Structures](/Data_Structures.md)
 - [Algorithms](/Algorithms.md)
-- UML
+- [UML](/UML.md)
 - Design Pattern
 - HR Interview
