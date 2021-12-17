@@ -1,4 +1,4 @@
-# Design Patterns
+# Design Pattern
 
 <sub>Heavily inspired (copied and pasted) from kamranahmedse's repo: [design-patterns-for-humans](https://github.com/kamranahmedse/design-patterns-for-humans)</sub>
 
