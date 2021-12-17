@@ -348,3 +348,104 @@ will be executed for each row affected by the event.
 
 > The trigger is associated with a table, but it is part of a database, so its 
 > name must be unique within the db itself.
+
+## Entity Relationship Model
+An __entity–relationship model__ (or __ER model__) describes interrelated 
+things of interest in a specific domain of knowledge. A basic ER model is 
+composed of entity types (which classify the things of interest) and specifies 
+relationships that can exist between entities (instances of those entity types).
+
+![ER Diagram](https://upload.wikimedia.org/wikipedia/commons/7/72/ER_Diagram_MMORPG.png)
+
+Some examples:
+
+|![Two related entities](https://upload.wikimedia.org/wikipedia/commons/3/3d/Erd-entity-relationship-example1.svg)|
+|-|
+|Two related entities|
+
+|![An entity with an attribute](https://upload.wikimedia.org/wikipedia/commons/9/90/Erd-entity-with-attribute.svg)|
+|-|
+|An entity with an attribute|
+
+|![A relationship with an attribute](https://upload.wikimedia.org/wikipedia/commons/9/9b/Erd-relationship-with-attribute.svg)|
+|-|
+|A relationship with an attribute|
+
+|![Primary key](https://upload.wikimedia.org/wikipedia/commons/c/cb/Erd-id-as-primary-key.svg)|
+|-|
+|Primary key|
+
+### Cardinalities
+There are 4 types of cardinality:
+1. Many-to-Many cardinality (m:n)
+2. Many-to-One cardinality (m:1)
+3. One-to-Many cardinality (1:n)
+4. One-to-One cardinality (1:1)
+
+#### Many-to-Many cardinality (m:n)
+By this cardinality constraint,
+- An entity in set A can be associated with any number (zero or more) 
+of entities in set B.
+- An entity in set B can be associated with any number (zero or more) 
+of entities in set A.
+
+![many-to-many](https://www.gatevidyalay.com/wp-content/uploads/2018/05/Many-to-Many-Cardinality-Ratio.png)
+
+##### Example
+Consider the following ER diagram
+
+![many-to-many-example](https://www.gatevidyalay.com/wp-content/uploads/2018/05/Many-to-Many-Relationship-ER-Diagram.png)
+
+Here,
+- One student can enroll in any number (zero or more) of courses.
+- One course can be enrolled by any number (zero or more) of students.
+
+#### Many-to-One cardinality (m:1)
+By this cardinality constraint,
+- An entity in set A can be associated with at most one entity in set B.
+- An entity in set B can be associated with any number (zero or more) 
+of entities in set A.
+
+![many-to-one](https://www.gatevidyalay.com/wp-content/uploads/2018/05/Many-to-One-Cardinality-Ratio.png)
+
+##### Example
+Consider the following ER diagram
+
+![many-to-one-example](https://www.gatevidyalay.com/wp-content/uploads/2018/05/Many-to-One-Relationship-ER-Diagram-1.png)
+
+Here,
+- One student can enroll in at most one course.
+- One course can be enrolled by any number (zero or more) of students.
+
+#### One-to-Many cardinality (1:n)
+By this cardinality constraint,
+- An entity in set A can be associated with any number (zero or more) 
+of entities in set B.
+- An entity in set B can be associated with at most one entity in set A.
+
+![one-to-many](https://www.gatevidyalay.com/wp-content/uploads/2018/05/One-to-Many-Cardinality-Ratio.png)
+
+##### Example
+Consider the following ER diagram
+
+![one-to-many-example](https://www.gatevidyalay.com/wp-content/uploads/2018/05/One-to-Many-Relationship-ER-Diagram.png)
+
+Here,
+- One student can enroll in any number (zero or more) of courses.
+- One course can be enrolled by at most one student.
+
+#### One-to-One cardinality (1:1)
+By this cardinality constraint,
+- An entity in set A can be associated with at most one entity in set B.
+- An entity in set B can be associated with at most one entity in set A.
+
+![one-to-one](https://www.gatevidyalay.com/wp-content/uploads/2018/05/One-to-One-Cardinality-Ratio.png)
+
+##### Example
+Consider the following ER diagram
+
+![one-to-one-example](https://www.gatevidyalay.com/wp-content/uploads/2018/05/One-to-One-Relationship-ER-Diagram.png)
+
+Here
+- One student can enroll in at most one course.
+- One course can be enrolled by at most one student.
