@@ -13,4 +13,5 @@ _Feels free to contribute._
 - [Algorithms](/Algorithms.md)
 - [UML](/UML.md)
 - [Design Pattern](/Design_Pattern.md)
-- HR Interview
+- [Questions and Answers](/QnA.md)
+- [Questions and Answers - Human Resource Edition](/HRQnA.md)
