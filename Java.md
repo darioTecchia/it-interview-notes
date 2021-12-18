@@ -480,7 +480,7 @@ to recursive function calls, TCE is no longer an optimization. It is a
 mandatory feature. That’s why TCE is a better term than TCO when it comes to 
 handling recursion.
 
-### General discussion about iteration
+### Recursion vs Iteration
 Below are the detailed example to illustrate the difference between the two:
 
 - __Time Complexity__: Finding the Time complexity of Recursion is more 
