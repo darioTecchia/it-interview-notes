@@ -1,32 +1,5 @@
 # SQL
 
-- [SQL](#sql)
-  * [Key Types](#key-types)
-    + [Referential integrity of mysql foreign keys rules](#referential-integrity-of-mysql-foreign-keys-rules)
-  * [JOIN](#join)
-    + [(INNER) JOIN](#-inner--join)
-      - [Example](#example)
-    + [LEFT (OUTER) JOIN](#left--outer--join)
-      - [Example](#example-1)
-    + [RIGHT (OUTER) JOIN](#right--outer--join)
-      - [Example](#example-2)
-    + [FULL (OUTER) JOIN](#full--outer--join)
-  * [Aggregation functions and UNION](#aggregation-functions-and-union)
-    + [Aggregation functions](#aggregation-functions)
-    + [UNION clause](#union-clause)
-  * [MySQL subquery](#mysql-subquery)
-  * [Single Value](#single-value)
-  * [Single Column](#single-column)
-  * [Single Row (Multiple Columns)](#single-row--multiple-columns-)
-  * [Transactions and Locks](#transactions-and-locks)
-  * [Views](#views)
-  * [Stored Procedures e Stored Functions](#stored-procedures-e-stored-functions)
-  * [Trigger](#trigger)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of 
-contents generated with markdown-toc</a></i></small>
-
-
 ## Key Types
 - `PRIMARY KEY`: The `PRIMARY KEY` constraint uniquely identifies each record 
 in a table. It must contain UNIQUE values, and cannot contain `NULL` values.
