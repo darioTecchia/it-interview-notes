@@ -489,7 +489,7 @@ difficult than that of Iteration.
   value of the nth recursive call in terms of the previous calls. Thus, 
   finding the destination case in terms of the base case, and solving in 
   terms of the base case gives us an idea of the time complexity of 
-  recursive equations. Please see Solving Recurrences for more details. 
+  recursive equations.
  
   - __Iteration__: Time complexity of iteration can be found by finding 
   the number of cycles being repeated inside the loop. 
