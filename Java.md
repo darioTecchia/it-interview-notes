@@ -1,48 +1,10 @@
 # Java
 
-- [Java](#java)
-  * [Java Scope](#java-scope)
-    + [Method Scope](#method-scope)
-    + [Block Scope](#block-scope)
-    + [Variable Kind](#variable-kind)
-  * [Java Modifiers](#java-modifiers)
-    + [Access Modifiers](#access-modifiers)
-    + [Non-Access Modifiers](#non-access-modifiers)
-  * [Wrapper Classes](#wrapper-classes)
-  * [Autoboxing and Unboxing](#autoboxing-and-unboxing)
-    + [Equality between wrapper classes](#equality-between-wrapper-classes)
-  * [Overload](#overload)
-  * [Override](#override)
-  * [VarArgs](#varargs)
-  * [Static Methods and Instance (Non static) Methods](#static-methods-and-instance--non-static--methods)
-  * [Array](#array)
-  * [String](#string)
-  * [Enum](#enum)
-  * [Multithreading](#multithreading)
-    + [Creating a Thread](#creating-a-thread)
-      - [Extend Syntax](#extend-syntax)
-      - [Implement Syntaxt](#implement-syntaxt)
-  * [Collection Interface and List Interface](#collection-interface-and-list-interface)
-  * [:: Keyword](#---keyword)
-  * [Lambda Expression](#lambda-expression)
-  * [Recursion](#recursion)
-    + [Recursion Example](#recursion-example)
-      - [Example](#example)
-      - [Example Explained](#example-explained)
-    + [How is recursion implemented in Java?](#how-is-recursion-implemented-in-java-)
-  * [Abstract Class](#abstract-class)
-    + [Abstract Class vs Interface](#abstract-class-vs-interface)
-  * [Generic Type](#generic-type)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of 
-contents generated with markdown-toc</a></i></small>
-
-
 ## Java Scope
 In Java, variables are only accessible inside the region they are created. 
 This is called scope.
 
-### Method Scope
+## Method Scope
 Variables declared directly inside a method are available anywhere in 
 the method following the line of code in which they were declared:
 
@@ -60,7 +22,7 @@ public class Main {
 }
 ```
 
-### Block Scope
+## Block Scope
 A block of code refers to all of the code between curly braces `{}`. 
 Variables declared inside blocks of code are only accessible by the code 
 between the curly braces, which follows the line in which the variable was 
@@ -88,14 +50,14 @@ public class Main {
   }
 }
 ```
-### Variable Kind
+## Variable Kind
 There are tree kinds of variable:
 - Local Variable: internal to the method
 - Instance Variable: internal to the class
 - Class Variable (Static)
 
 ## Java Modifiers
-### Access Modifiers
+## Access Modifiers
 For __classes__, you can use either `public` or `default`:
 | Modifier | Description |
 | - | - |
@@ -112,7 +74,7 @@ the following:
 | `default` | The code is only accessible in the same package. This is used when you don't specify a modifier. |
 | `protected` |	The code is accessible in the same package and subclasses. |
 
-### Non-Access Modifiers
+## Non-Access Modifiers
 For __classes__, you can use either `final` or `abstract`:
 | Modifier | Description |
 | - | - |
@@ -138,7 +100,7 @@ Sometimes you must use wrapper classes, for example when working with
 Collection objects, such as `ArrayList`, where primitive types cannot be used 
 (the list can only store objects).
 
-### Autoboxing and Unboxing
+## Autoboxing and Unboxing
 Autoboxing is the automatic conversion that the Java compiler makes between 
 the primitive types and their corresponding object wrapper classes. 
 For example, converting an `int` to an `Integer`, a `double` to a `Double`, 
@@ -160,7 +122,7 @@ public static int absoluteValue(int i) {
 }
 ```
 
-### Equality between wrapper classes
+## Equality between wrapper classes
 Particular attention should be paid to the use of the equality operator (`==`) 
 between wrapper classes since the comparison would be done by reference and 
 the result could be false (unboxing is not done).
@@ -272,10 +234,10 @@ things at the same time.
 Threads can be used to perform complicated tasks in the background without 
 interrupting the main program.
 
-### Creating a Thread
+## Creating a Thread
 There are two ways to create a thread.
 
-#### Extend Syntax
+### Extend Syntax
 It can be created by extending the `Thread` class and overriding its `run()` 
 method:
 ```java
@@ -285,7 +247,7 @@ public class Main extends Thread {
   }
 }
 ```
-#### Implement Syntaxt
+### Implement Syntaxt
 Another way to create a thread is to implement the `Runnable` interface:
 ```java
 public class Main implements Runnable {
@@ -394,13 +356,13 @@ are easier to solve.
 Recursion may be a bit difficult to understand. The best way to figure out how 
 it works is to experiment with it.
 
-### Recursion Example
+## Recursion Example
 Adding two numbers together is easy to do, but adding a range of numbers is 
 more complicated. In the following example, recursion is used to add a range 
 of numbers together by breaking it down into the simple task of adding two 
 numbers:
 
-#### Example
+### Example
 Use recursion to add all of the numbers up to 10.
 
 ```java
@@ -419,7 +381,7 @@ public class Main {
 }
 ```
 
-#### Example Explained
+### Example Explained
 When the `sum()` function is called, it adds parameter `k` to the sum of all 
 numbers smaller than `k` and returns the result. When `k` becomes 0, the 
 function just returns 0. When running, the program follows these steps:
@@ -436,7 +398,7 @@ function just returns 0. When running, the program follows these steps:
 Since the function does not call itself when `k` is 0, the program stops there 
 and returns the result.
 
-### How is recursion implemented in Java?
+## How is recursion implemented in Java?
 To understand what’s happening, we must look at how Java handles method calls. 
 When a method is called, Java suspends what it is currently doing and pushes 
 the environment on the stack to make place for the called method execution. 
@@ -480,7 +442,7 @@ to recursive function calls, TCE is no longer an optimization. It is a
 mandatory feature. That’s why TCE is a better term than TCO when it comes to 
 handling recursion.
 
-### Recursion vs Iteration
+## Recursion vs Iteration
 Below are the detailed example to illustrate the difference between the two:
 
 - __Time Complexity__: Finding the Time complexity of Recursion is more 
@@ -531,7 +493,7 @@ crash but in iteration, it will stop when memory is exhausted.
 ## Abstract Class
 An abstract class is a class that cannot be instantiated.
 
-### Abstract Class vs Interface
+## Abstract Class vs Interface
 - An __Abstract Class__ is used to share code among several classes, if several 
 classes have methods in common.
 - An __Interface__ is used if several unrelated classes share the same 
