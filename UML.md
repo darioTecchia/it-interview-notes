@@ -12,7 +12,8 @@ the following class diagram:
 
 ![uml class diagram](https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg)
 
-These diagrams may all contain comments or notes explaining usage, constraint, or intent.
+These diagrams may all contain comments or notes explaining usage, constraint, 
+or intent.
 
 ## Structure Diagram
 Structure diagrams represent the static aspects of the system. It emphasizes 
