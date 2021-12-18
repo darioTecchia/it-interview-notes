@@ -480,6 +480,54 @@ to recursive function calls, TCE is no longer an optimization. It is a
 mandatory feature. That’s why TCE is a better term than TCO when it comes to 
 handling recursion.
 
+### General discussion about iteration
+Below are the detailed example to illustrate the difference between the two:
+
+- __Time Complexity__: Finding the Time complexity of Recursion is more 
+difficult than that of Iteration. 
+  - __Recursion__: Time complexity of recursion can be found by finding the 
+  value of the nth recursive call in terms of the previous calls. Thus, 
+  finding the destination case in terms of the base case, and solving in 
+  terms of the base case gives us an idea of the time complexity of 
+  recursive equations. Please see Solving Recurrences for more details. 
+ 
+  - __Iteration__: Time complexity of iteration can be found by finding 
+  the number of cycles being repeated inside the loop. 
+ 
+- __Usage__: Usage of either of these techniques is a trade-off between time 
+complexity and size of code. If time complexity is the point of focus, and 
+number of recursive calls would be large, it is better to use iteration. 
+However, if time complexity is not an issue and shortness of code is, 
+recursion would be the way to go.
+  - __Recursion__: Recursion involves calling the same function again, 
+  and hence, has a very small length of code. However, as we saw in the 
+  analysis, the time complexity of recursion can get to be exponential when 
+  there are a considerable number of recursive calls. Hence, usage of 
+  recursion is advantageous in shorter code, but higher time complexity. 
+ 
+  - __Iteration__: Iteration is repetition of a block of code. This involves 
+  a larger size of code, but the time complexity is generally lesser than it 
+  is for recursion. 
+ 
+- __Overhead__: Recursion has a large amount of Overhead as compared to 
+Iteration. 
+  - __Recursion__: Recursion has the overhead of repeated function calls, 
+  that is due to repetitive calling of the same function, the time complexity 
+  of the code increases manifold. 
+ 
+  - __Iteration__: Iteration does not involve any such overhead. 
+ 
+- __Infinite Repetition__: Infinite Repetition in recursion can lead to CPU 
+crash but in iteration, it will stop when memory is exhausted. 
+  - __Recursion__: In Recursion, Infinite recursive calls may occur due to some 
+  mistake in specifying the base condition, which on never becoming false, 
+  keeps calling the function, which may lead to system CPU crash. 
+ 
+  - __Iteration__: Infinite iteration due to mistake in iterator assignment 
+  or increment, or in the terminating condition, will lead to infinite loops, 
+  which may or may not lead to system errors, but will surely stop program 
+  execution any further. 
+
 ## Abstract Class
 An abstract class is a class that cannot be instantiated.
 
