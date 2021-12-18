@@ -1,4 +1,4 @@
-# Questions and Answers take from the world
+# Questions and Answers taken from the world
 
 https://career.guru99.com/technical-interview-questions/
 
