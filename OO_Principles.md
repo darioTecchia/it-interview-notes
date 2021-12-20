@@ -149,8 +149,8 @@ public class D {
 	}
 }
 public class E extends D {
-   public A giveMeB() {
-     // returns A instance
-   }
+	public A giveMeB() {
+		// returns A instance
+	}
 }
 ```
