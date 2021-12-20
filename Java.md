@@ -32,29 +32,30 @@ declared:
 public class Main {
   public static void main(String[] args) {
 
-    // Code here CANNOT use x
+    // x NOT defined
 
     { // This is a block
 
-      // Code here CANNOT use x
+      // x NOT defined
 
       int x = 100;
 
-      // Code here CAN use x
+      // x DEFINED
+
       System.out.println(x);
 
-   } // The block ends here
+    } // The block ends here
 
-  // Code here CANNOT use x
+    // x NOT defined
 
   }
 }
 ```
 ## Variable Kind
 There are tree kinds of variable:
-- Local Variable: internal to the method
-- Instance Variable: internal to the class
-- Class Variable (Static)
+- __Local Variable__: internal to the method
+- __Instance Variable__: internal to the class
+- __Class Variable__ (Static)
 
 ## Java Modifiers
 ## Access Modifiers
@@ -115,7 +116,7 @@ Integer x = new Integer(10); // boxing
 int y = x.absoluteValue(x) // unboxing
 
 ```
-
+Where `absoluteValue()` is defined as follow:
 ```java
 public static int absoluteValue(int i) {
   return (i < 0) ? -i : i;
@@ -150,8 +151,60 @@ class Foo {
 ```
 
 ## Override
-// TODO
+__Method overriding__ is one of the way by which java achieve Run Time 
+Polymorphism. The version of a method that is executed will be determined by 
+the object that is used to invoke it. If an object of a parent class is used to 
+invoke the method, then the version in the parent class will be executed, but 
+if an object of the subclass is used to invoke the method, then the version 
+in the child class will be executed. In other words, it is the type of the 
+object being referred to (not the type of the reference variable) that 
+determines which version of an overridden method will be executed.
+```java
+// A Simple Java program to demonstrate
+// method overriding in java
+  
+// Base Class
+class Parent {
+    void show()
+    {
+        System.out.println("Parent's show()");
+    }
+}
+  
+// Inherited class
+class Child extends Parent {
+    // This method overrides show() of Parent
+    @Override
+    void show()
+    {
+        System.out.println("Child's show()");
+    }
+}
+  
+// Driver class
+class Main {
+    public static void main(String[] args)
+    {
+        // If a Parent type reference refers
+        // to a Parent object, then Parent's
+        // show is called
+        Parent obj1 = new Parent();
+        obj1.show();
+  
+        // If a Parent type reference refers
+        // to a Child object Child's show()
+        // is called. This is called RUN TIME
+        // POLYMORPHISM.
+        Parent obj2 = new Child();
+        obj2.show();
+    }
+}
+```
 
+```text
+Parent's show()
+Child's show()
+```
 ## VarArgs
 Varargs provide a short-hand for methods that support an arbitrary number 
 of parameters of one type.
@@ -234,7 +287,7 @@ things at the same time.
 Threads can be used to perform complicated tasks in the background without 
 interrupting the main program.
 
-## Creating a Thread
+### Creating a Thread
 There are two ways to create a thread.
 
 ### Extend Syntax
@@ -321,6 +374,18 @@ was introduced in Java 8 to reference methods:
 reduce(Math::max);
 ```
 
+### Another example
+```java
+ArrayList<String> arr = new ArrayList<String>();
+
+arr.add("Hello");
+arr.add("World");
+
+Optional<String> opt = arr.stream().reduce(String::concat);
+
+opt.ifPresent(System.out::println);
+```
+
 > Note that this will be interpreted by the compiler, not by the JVM at runtime.
 
 ## Lambda Expression
@@ -356,13 +421,12 @@ are easier to solve.
 Recursion may be a bit difficult to understand. The best way to figure out how 
 it works is to experiment with it.
 
-## Recursion Example
+### Recursion Example
 Adding two numbers together is easy to do, but adding a range of numbers is 
 more complicated. In the following example, recursion is used to add a range 
 of numbers together by breaking it down into the simple task of adding two 
 numbers:
 
-### Example
 Use recursion to add all of the numbers up to 10.
 
 ```java
@@ -398,7 +462,7 @@ function just returns 0. When running, the program follows these steps:
 Since the function does not call itself when `k` is 0, the program stops there 
 and returns the result.
 
-## How is recursion implemented in Java?
+### How is recursion implemented in Java?
 To understand what’s happening, we must look at how Java handles method calls. 
 When a method is called, Java suspends what it is currently doing and pushes 
 the environment on the stack to make place for the called method execution. 
@@ -442,7 +506,7 @@ to recursive function calls, TCE is no longer an optimization. It is a
 mandatory feature. That’s why TCE is a better term than TCO when it comes to 
 handling recursion.
 
-## Recursion vs Iteration
+### Recursion vs Iteration
 Below are the detailed example to illustrate the difference between the two:
 
 - __Time Complexity__: Finding the Time complexity of Recursion is more 
