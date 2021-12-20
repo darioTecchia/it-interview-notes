@@ -1,7 +1,7 @@
 # Web Development
 
 ## Explain what is CORS? How does it work?
-(CORS) Cross-Origin Resource Sharing is a mechanism that enables many resources (e.g., JavaScript, fonts etc.) on a web page to be requested from another domain outside the domain from which the resource originated.  It is a mechanism supported in HTML5 that manages XMLHttpRequest access to a domain different.
+__Cross-Origin Resource Sharing__ (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
 ## List out the advantage of HTTP/2 as compared with HTTP 1.1?
 The advantage of HTTP/2 compared to HTTP/1.1 is:
