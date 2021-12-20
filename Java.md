@@ -486,7 +486,7 @@ same stack size is used for all threads, so increasig the stack size for a
 single computation will generally waste space. Default stack size varies 
 between 320k and 1024k depending on the version of Java and the system used. 
 For a 64 bits Java 8 program with minimal stack usage, the maximum number of 
-nested method calls is about 7 000. Generally, we don’t need more, excepted 
+nested method calls is about 7000. Generally, we don’t need more, excepted 
 in very specific cases. One such case is recursive method calls.
 
 Tail Call Elimination (TCE)Pushing the environment on the stack seems necessary 
@@ -557,7 +557,7 @@ crash but in iteration, it will stop when memory is exhausted.
 ## Abstract Class
 An abstract class is a class that cannot be instantiated.
 
-## Abstract Class vs Interface
+### Abstract Class vs Interface
 - An __Abstract Class__ is used to share code among several classes, if several 
 classes have methods in common.
 - An __Interface__ is used if several unrelated classes share the same 
