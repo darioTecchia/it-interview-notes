@@ -23,12 +23,11 @@ To decrease the load time of a web application you have to follow the following 
 The correct way to include JavaScript into your HTML is by using inline event handlers or inline code.
 
 ## Explain what is the difference between cookies and local storage?
-||||
-|--- |--- |--- |
 ||Cookies|Local Storage|
-|Client Side/ Server Side|Data accessible both at client side and server side. The data is sent to the serverside with every cookie request.|Only at the local browser side data is accessible. Server cannot use local storage until deliberately sent a request to the server via POST or GET|
-|Size|Storage capacity of cookies is 4095 bytes/cookie|Storage capacity of local storage is 5MB per domain|
-|Expiration|Cookies have expiration and cookie data gets deleted after some time|There is no expiration and has to remove manually|
+|--- |--- |--- |
+|__Client Side/Server Side__|Data accessible both at client side and server side. The data is sent to the serverside with every cookie request.|Only at the local browser side data is accessible. Server cannot use local storage until deliberately sent a request to the server via POST or GET|
+|__Size__|Storage capacity of cookies is 4095 bytes/cookie|Storage capacity of local storage is 5MB per domain|
+|__Expiration__|Cookies have expiration and cookie data gets deleted after some time|There is no expiration and has to remove manually|
 
 ## Explain how can you refer to CSS file in the web page?
 You can refer to the `.css` file in the webpage by using the `<link>` tag. It should be kept between `<head></head>` tags. For example `<link href=”/css/mystyle.css” type=”text/css” rel=”stylesheet”/>`.
